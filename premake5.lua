@@ -25,15 +25,15 @@ project "Graphics"
 
 	includedirs
 	{
-		"Libraries\glew-2.2.0\include\GL",
-		"Libraries\glm",
-		"Libraries\SDL2-2.28.3\include"
+		"Libraries/glew-2.2.0/include/GL",
+		"Libraries/glm",
+		"Libraries/SDL2-2.28.3/include"
 	}
 
 	libdirs
 	{
-		"Libraries\SDL2-2.28.3\lib\x86",
-		"Libraries\glew-2.2.0\lib\Release\Win32"
+		"Libraries/SDL2-2.28.3/lib",
+		"Libraries/glew-2.2.0/lib"
 	}
 
 	links
@@ -42,6 +42,11 @@ project "Graphics"
 		"SDL2main.lib",
 		"glew32s.lib",
 		"opengl32.lib"
+	}
+
+	postbuildcommands
+	{
+		("{copy} ../Libraries/SDL2-2.28.3/lib/SDL2.dll ../bin/" .. outputdir .. "/Graphics")
 	}
 
 	filter "system:windows"

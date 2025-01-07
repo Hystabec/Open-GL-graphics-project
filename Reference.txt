@@ -1,0 +1,3 @@
+3D.frag and 3D.vert:
+    based on code from:
+	Sellers G., Wright R.S. and Haemel N. (2015) OpenGL superbible: Comprehensive Tutorial and Reference.
